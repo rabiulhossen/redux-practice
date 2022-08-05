@@ -161,3 +161,54 @@ store.dispatch(resetAction());
 store.dispatch(incrementAction());
 store.dispatch(incrementAction());
 store.dispatch(incrementAction());
+
+const GET_PRODUCT="GET_PRODUCT"
+const ADD_PRODUCT ="ADD_PRODUCT"
+
+// Product Reducer 
+const initialProductState ={
+  products:['sugar','salt'],
+  numberProducts:2
+};
+const getProducts =()=>{
+  return{
+    type: GET_PRODUCT
+  }
+}
+const addProduct =(user)=>{
+  return{
+    type:ADD_PRODUCT,
+    payload:user
+  }
+}
+
+
+const ProductReducer =(state=initialProductState,action)=>{
+  switch (action.type) {
+    case GET_PRODUCT:
+      return{
+        ...state,
+      }
+   case ADD_PRODUCT:
+    return{
+      products :[...state.products,action.payload],
+      numberProducts : state.numberProducts +1,
+    }
+  
+    default:
+     state;
+  }
+}
+// cartReducer 
+
+// store 
+
+const storee = createStore(ProductReducer)
+
+storee.subscribe(()=>{
+  console.log(storee.getState());
+})
+storee.dispatch(getProducts())
+
+storee.dispatch(addProduct("oil"))
+storee.dispatch(addProduct("ONION"))
