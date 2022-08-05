@@ -1,47 +1,5 @@
 
 
-// const redux = require("redux");
-// const createStore = redux.createStore;
-
-// const buycake = "Buy_Cake";
-
-// function buyccake() {
-//   return {
-//     type: "buycake",
-//     info: "first redux action",
-//   };
-// }
-
-// // (peviousState , action)=> newstate
-
-// const initialState = {
-//   numCake: 10,
-// };
-
-// const reducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case buyccake:
-//       return {
-//         ...state,
-//         numCake: state.initialState - 1,
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
-// const store = createStore(reducer);
-
-// console.log("initial state", store.getState());
-
-// store.subscribe(() => {
-//   console.log("store is update", store.getState());
-// });
-
-// store.dispatch(buyccake());
-// store.dispatch(buyccake());
-// store.dispatch(buyccake());
-// unsubscribe()
 
 /* 
 const {createStore} = require('redux');
