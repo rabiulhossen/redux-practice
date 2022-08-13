@@ -78,9 +78,7 @@ store.subscribe(()=>{
 })
 
 // dispatch action 
-store.dispatch(counterAction())
-store.dispatch(counterAction())
-store.dispatch(counterAction())
+
 store.dispatch(counterAction())
 store.dispatch(decrementCount())
 store.dispatch(decrementCount())
@@ -212,3 +210,6 @@ storee.dispatch(getProducts())
 
 storee.dispatch(addProduct("oil"))
 storee.dispatch(addProduct("ONION"))
+storee.dispatch(addProduct("tea"))
+storee.dispatch(addProduct("red chili"))
+storee.dispatch(addProduct("ginger"))
